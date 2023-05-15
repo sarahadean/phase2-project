@@ -3,7 +3,7 @@ import CapitalCard from 'project-app/src/components/CapitalList.js'
 
 function CapitalList() {
   return (
-    <div>CapitalList
+    <div className='cards'>CapitalList
       <CapitalCard />
     </div>
   )
