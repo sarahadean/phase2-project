@@ -8,4 +8,46 @@
 - Sort cities by population size, alphabetically
 - Filter by continent
 - Search for specific city!
+
+### Wireframe
+
+### Component Tree
+
+### API Routes
   
+| API Route                               | Method Request | Body                                   | Response                               |
+|-----------------------------------------|----------------|----------------------------------------|----------------------------------------|
+| /all?fields=name,capital,currencies     | GET            |                                        | [{..}, {..}, ...]                      |
+| /all?fields=name,capital,currencies     | POST           | {capital, country, flag, about, image} | {captial, country, flag, about, image} |
+| /all?fields=name,capital,currencies/:id | DELETE         |                                        | {}                                     |
+
+### Example Data
+
+```
+{
+    "name": {
+      "common": "Spain",
+      "official": "Kingdom of Spain",
+      "nativeName": {
+        "spa": {
+          "official": "Reino de España",
+          "common": "España"
+        }
+      }
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "capital": [
+      "Madrid"
+    ]
+  },
+```
+
+### Client Side Routes
+
+
+### Trello
