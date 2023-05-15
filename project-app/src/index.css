@@ -30,6 +30,11 @@ code {
       box-sizing: border-box;
     }
   
+    .App{
+      background-color: #338fff;
+    }
+
+
   /*cards*/
   .cards {
       margin: 0 auto;
@@ -38,6 +43,7 @@ code {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1.5rem;
+      background-color: var(--blue-dark);
     }
   
     .card {

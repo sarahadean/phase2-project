@@ -1,6 +1,6 @@
 import NavBar from './NavBar'
 
-function Header ({logo}) {
+function Header () {
     return (
         <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" />
