@@ -12,7 +12,7 @@
 ### Wireframe
 [Main Page](https://github.com/sarahadean/phase2-project/assets/128323898/061d46e6-d3be-4f4f-b1e5-b1c29eee403f)
 
-<img src="./assets/128323898/a8fe4743-bed2-454c-94da-378c198e0b3c" width="300px">
+<img src="https://github.com/sarahadean/phase2-project/assets/128323898/a8fe4743-bed2-454c-94da-378c198e0b3c" width="300px">
 
 
 
