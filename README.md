@@ -51,3 +51,7 @@
 
 
 ### Trello
+![Trello Board](https://github.com/sarahadean/phase2-project/assets/128323898/58890915-16d9-4c5c-b7e3-ff8d2c2d2371)
+
+
+
