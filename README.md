@@ -1,4 +1,4 @@
-# phase2-project
+# Passport Gals ft. Josh
 
 ### Description: Learn about different capital cities from around the world
 
