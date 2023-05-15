@@ -10,7 +10,8 @@
 - Search for specific city!
 
 ### Wireframe
-[Main Page](https://github.com/sarahadean/phase2-project/assets/128323898/061d46e6-d3be-4f4f-b1e5-b1c29eee403f)
+![Main Page](https://github.com/sarahadean/phase2-project/assets/128323898/061d46e6-d3be-4f4f-b1e5-b1c29eee403f)
+
 
 ### Component Tree
 
