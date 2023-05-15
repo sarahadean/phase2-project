@@ -10,10 +10,10 @@
 - Search for specific city!
 
 ### Wireframe
-[Main Page](https://github.com/sarahadean/phase2-project/assets/128323898/061d46e6-d3be-4f4f-b1e5-b1c29eee403f)
+[Main Page](https://www.figma.com/file/JMLkQ0CieBgAffyyFsI3h6/Phase-2-Portfolio-Demo-(Copy)?type=design&node-id=102-36&t=bOKV0RYcbP11qvWm-0)
 
 <img src="https://github.com/sarahadean/phase2-project/assets/128323898/a8fe4743-bed2-454c-94da-378c198e0b3c" width="300px">
-
+<img src="https://github.com/sarahadean/phase2-project/assets/128323898/f427fce4-91ed-41b6-88fc-edda06f2c6ae" width="300px">
 
 
 ### Component Tree
