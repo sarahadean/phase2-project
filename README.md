@@ -14,7 +14,7 @@
 
 <img src="https://github.com/sarahadean/phase2-project/assets/128323898/a8fe4743-bed2-454c-94da-378c198e0b3c" width="300px">
 <img src="https://github.com/sarahadean/phase2-project/assets/128323898/f427fce4-91ed-41b6-88fc-edda06f2c6ae" width="300px">
-
+<img src="https://github.com/sarahadean/phase2-project/assets/128323898/5f44c66f-82cd-4372-8d6d-a228368f5e85" width="300px">
 
 ### Component Tree
 
