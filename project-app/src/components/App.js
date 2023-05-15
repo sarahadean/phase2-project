@@ -9,9 +9,7 @@ import {
 import Home from '../pages/Home'
 import About from '../pages/About'
 import Favorites from '../pages/Favorites'
-
 import Header from '../components/Header'
-
 
 function App() {
   return (
