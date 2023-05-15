@@ -15,6 +15,9 @@ function Home() {
         <li>
           <Link to="/country/uk">UK</Link>
         </li>
+        <li>
+          <Link to="/bucketlist">Bucket List</Link>
+        </li>
       </ul>
     </div>
   );
