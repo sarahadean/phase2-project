@@ -10,7 +10,7 @@
 - Search for specific city!
 
 ### Wireframe
-[main page wireframe](https://flatiron-school.slack.com/files/U04U4KSUECW/F057U5T3G4S/wireframe.screenshot_2023-05-15_113619.png)
+![main page wireframe](https://flatiron-school.slack.com/files/U04U4KSUECW/F057U5T3G4S/wireframe.screenshot_2023-05-15_113619.png)
 
 ### Component Tree
 
