@@ -2,7 +2,7 @@ import React from 'react'
 
 function CapitalCard() {
   return (
-    <div>CapitalCard</div>
+    <div className='card'>CapitalCard</div>
   )
 }
 
