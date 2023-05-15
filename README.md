@@ -18,6 +18,9 @@
 
 ### Component Tree
 
+![Component Tree](https://github.com/sarahadean/phase2-project/assets/128323898/c84846f2-3fbc-409a-aa4b-c75486a05324)
+
+
 ### API Routes
   
 | API Route                               | Method Request | Body                                   | Response                               |
