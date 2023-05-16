@@ -5,9 +5,9 @@ function NavBar () {
     }
 
     return (
-        <div>SITE NAVIGATION
-            <nav>
-                <ul id="nav-list">
+        <div >
+            <nav id="nav-list">
+                <ul >
                 <li>
                     <a href="/" onClick={navigate}>HOME</a>
                 </li>
@@ -16,6 +16,9 @@ function NavBar () {
                 </li>
                 <li>
                     <a href="/favorites" onClick={navigate}>FAVORITES</a>
+                </li>
+                <li>
+                    <a href="/form" onClick={navigate}>ADD</a>
                 </li>
                 </ul>
             </nav>

@@ -18,6 +18,7 @@ function Home() {
 
   // console.log(capitals) - GET REQUEST SUCCESSFUL
 
+///search functionality
   const handleSearch = (newStr) => {
     setSearch(newStr)
   }
@@ -26,9 +27,15 @@ function Home() {
   el.name.common.toLowerCase().includes(search.toLowerCase())
   )
 
+  //filter functionality
+  function filterByRegion(selectedRegion){
+   [...capitals].filter(el =>
+    el.region === selectedRegion ? true : false)
+  }
+
     return (
-      <div>HOME PAGE
-        <Menu search={search} handleSearch={handleSearch}/>
+      <div>
+        <Menu filterByRegion={filterByRegion} search={search} handleSearch={handleSearch}/>
         <CapitalList capitals={displayedCapitals}/>
       </div>
     )

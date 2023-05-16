@@ -2,7 +2,8 @@ import React from 'react'
 
 function SearchBar({search, handleSearch}) {
   return (
-    <div>SearchBar
+    <div id="searchBar">
+      <label>Search: </label>
       <input 
       type="text"
       id="search"
