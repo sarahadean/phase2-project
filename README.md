@@ -17,9 +17,8 @@ Home Page
 <img src="https://github.com/sarahadean/phase2-project/assets/128323898/5f44c66f-82cd-4372-8d6d-a228368f5e85" width="300px">
 Favorite's Page
 
-### Component Tree
-
-![Component Tree](https://github.com/sarahadean/phase2-project/assets/128323898/c84846f2-3fbc-409a-aa4b-c75486a05324)
+### Component Tree 
+![Screenshot 2023-05-16 at 2 13 59 PM](https://github.com/sarahadean/phase2-project/assets/128323898/ee9f1be4-3b82-4de9-95c3-fbd578821998)
 
 
 ### API Routes
