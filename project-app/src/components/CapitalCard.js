@@ -33,12 +33,12 @@ function CapitalCard({capitalInfo}) {
   const {name: {common}, capital, region, flag} = capitalInfo
 
   return (
-    <div className='card'>CapitalCard
+    <div className='card'>
+      <span className='flag'>{flag}</span>
       <ul>
       <li>Capital:{capital}</li>
       <li>Country:{common}</li>
       <li>Region:{region}</li>
-      <li>Flag:{flag}</li>
       </ul>
     </div>
   )
