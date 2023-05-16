@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import CapitalList from 'project-app/src/components/CapitalList'
+import CapitalList from './../components/CapitalList'
 import Menu from './../components/Menu'
 
 
