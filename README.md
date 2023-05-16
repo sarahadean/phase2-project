@@ -28,8 +28,8 @@ API: https://restcountries.com/#fields
 | API Route      | Method Request | Body                                   | Response                               |
 |----------------|----------------|----------------------------------------|----------------------------------------|
 | /capitals      | GET            |                                        | [{..}, {..}, ...]                      |
-| /capitals      | POST           | {capital, country, flag, about, image} | {capital, country, flag, about, image} |
-| /favorites     | POST           | {capital, country, flag, about, image} | {capital, country, flag, about, image} |
+| /capitals      | POST           | {capital, country, flag, region, currency} | {capital, country, flag, region, currency} |
+| /favorites     | POST           | {capital, country, flag, region, currency} | {capital, country, flag, region, currency} |
 | /favorites/:id | DELETE         |                                        | {}                                     |
 ### Example Data
 
@@ -64,6 +64,7 @@ API: https://restcountries.com/#fields
 | “/” 	| Home.js 	|
 | ./about 	| About.js 	|
 | ./favorites 	| Favorites.js 	|
+| ./form   | Form.js |
 
 ### Trello
 ![Trello Board](https://github.com/sarahadean/phase2-project/assets/128323898/58890915-16d9-4c5c-b7e3-ff8d2c2d2371)
