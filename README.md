@@ -3,11 +3,11 @@
 ### Description: Learn about different capital cities from around the world
 
 ### User Stories:
-- Click on each card to view information about city (image, population, flag, location, animals)
-- Create your own 'Bucket List' -  Add and delete cities
-- Sort cities by population size, alphabetically
-- Filter by continent
-- Search for specific city!
+- Click on cards to mark as 'favorite' and create a travel Bucket List with own notes. 
+- Add travel destinations to main list
+- Sort desinations alphabetically
+- Filter by region
+- Search for specific city
 
 ### Wireframe
 [Main Page](https://www.figma.com/file/JMLkQ0CieBgAffyyFsI3h6/Phase-2-Portfolio-Demo-(Copy)?type=design&node-id=102-36&t=bOKV0RYcbP11qvWm-0)
