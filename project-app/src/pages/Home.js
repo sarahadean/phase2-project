@@ -23,9 +23,8 @@ function Home() {
   }
 
   const displayedCapitals = capitals.filter((el) => 
-  el.common.toLowerCase().includes(search.toLowerCase())
+  el.name.common.toLowerCase().includes(search.toLowerCase())
   )
-  console.log(displayedCapitals)
 
     return (
       <div>HOME PAGE
