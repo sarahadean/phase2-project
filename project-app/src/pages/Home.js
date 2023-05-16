@@ -6,6 +6,7 @@ import Menu from './../components/Menu'
 function Home() {
 
   const [capitals, setCapitals] = useState([])
+  const [search, setSearch] = useState('')
 
   useEffect(() => {getCapitals()}, [])
 
@@ -17,10 +18,19 @@ function Home() {
 
   // console.log(capitals) - GET REQUEST SUCCESSFUL
 
+  const handleSearch = (newStr) => {
+    setSearch(newStr)
+  }
+
+  const displayedCapitals = capitals.filter((el) => 
+  el.common.toLowerCase().includes(search.toLowerCase())
+  )
+  console.log(displayedCapitals)
+
     return (
       <div>HOME PAGE
-        <Menu />
-        <CapitalList capitals={capitals}/>
+        <Menu search={search} handleSearch={handleSearch}/>
+        <CapitalList capitals={displayedCapitals}/>
       </div>
     )
   }
