@@ -25,13 +25,12 @@ Favorite's Page
 ### API Routes
 
 API: https://restcountries.com/#fields
-  
-| API Route                               | Method Request | Body                                   | Response                               |
-|-----------------------------------------|----------------|----------------------------------------|----------------------------------------|
-| /all?fields=name,capital,currencies     | GET            |                                        | [{..}, {..}, ...]                      |
-| /favorites     | POST           | {capital, country, flag, about, image} | {captial, country, flag, about, image} |
+| API Route      | Method Request | Body                                   | Response                               |
+|----------------|----------------|----------------------------------------|----------------------------------------|
+| /capitals      | GET            |                                        | [{..}, {..}, ...]                      |
+| /capitals      | POST           | {capital, country, flag, about, image} | {capital, country, flag, about, image} |
+| /favorites     | POST           | {capital, country, flag, about, image} | {capital, country, flag, about, image} |
 | /favorites/:id | DELETE         |                                        | {}                                     |
-
 ### Example Data
 
 ```
