@@ -2,7 +2,12 @@ import React from 'react'
 
 function Form() {
   return (
-    <div>Form</div>
+    <div>Form
+      <form>
+        <input>City name: </input>
+        <input></input>
+      </form>
+    </div>
   )
 }
 

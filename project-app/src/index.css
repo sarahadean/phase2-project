@@ -31,7 +31,7 @@ code {
     }
   
     .App{
-      background-color: #338fff;
+      background-color: var(--white)
     }
 
 
@@ -43,14 +43,19 @@ code {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1.5rem;
-      background-color: var(--blue-dark);
+    
     }
   
     .card {
       max-width: 400px;
-      min-height: 515px;
-      max-height: 515px;
+      min-height: 400px;
+      max-height: 400px;
       display: grid;
       grid-template-rows: auto 1fr auto;
       border: 2px solid var(--dark-turquoise);
+      background-color: var(--blue);
+    }
+
+    .flag {
+      background-color: var(--green);
     }
