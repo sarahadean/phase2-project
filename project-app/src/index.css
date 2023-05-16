@@ -59,3 +59,17 @@ code {
     .flag {
       background-color: var(--green);
     }
+
+    /* Nav List */
+    #nav-list {
+      background-color: darkgreen;
+    }
+
+    .App-header {
+      background-color: darkolivegreen;
+    }
+
+    /* Search Bar */
+    #searchBar {
+      background-color: darkcyan;
+    }
