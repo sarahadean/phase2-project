@@ -1,7 +1,9 @@
 import React from 'react'
 import CapitalCard from 'project-app/src/components/CapitalList.js'
 
-function CapitalList() {
+function CapitalList({capitals}) {
+
+console.log(capitals)
   return (
     <div className='cards'>CapitalList
       <CapitalCard />
