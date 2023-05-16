@@ -1,10 +1,10 @@
 import React from 'react'
 import SearchBar from './SearchBar'
 
-function Menu() {
+function Menu({search, handleSearch}) {
   return (
     <div>Menu
-      <SearchBar />
+      <SearchBar search={search} handleSearch={handleSearch}/>
     </div>
   )
 }
