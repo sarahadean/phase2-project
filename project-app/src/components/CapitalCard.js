@@ -1,6 +1,11 @@
 import React from 'react'
 
 // {
+//   "flags": {
+//       "png": "https://flagcdn.com/w320/kw.png",
+//       "svg": "https://flagcdn.com/kw.svg",
+//       "alt": "The flag of Kuwait is composed of three equal horizontal bands of green, white and red, with a black trapezium superimposed on the hoist side of the field. This trapezium has its base on the hoist end and spans about one-fourth the width of the field."
+//   },
 //   "name": {
 //       "common": "Kuwait",
 //       "official": "State of Kuwait",
@@ -11,34 +16,39 @@ import React from 'react'
 //           }
 //       }
 //   },
-
 //   "currencies": {
 //       "KWD": {
 //           "name": "Kuwaiti dinar",
 //           "symbol": "د.ك"
 //       }
 //   },
-
 //   "capital": [
 //       "Kuwait City"
 //   ],
-
 //   "region": "Asia",
-//   "flag": "🇰🇼"
+//   "languages": {
+//       "ara": "Arabic"
+//   },
+//   "continents": [
+//       "Asia"
+//   ]
 // },
 
-function CapitalCard({capitalInfo}) {
-  console.log(capitalInfo)
+function CapitalCard({country}) {
 
-  const {name: {common}, capital, region, flag} = capitalInfo
+  const {flags: {png}, flags: {alt}, name: {common}, capital, region, continents} = country
 
   return (
     <div className='card'>
-      <span className='flag'>{flag}</span>
+      <span className='flag'>
+        <img src={png} alt={alt}/>
+      </span>
       <ul>
-      <li>Capital:{capital}</li>
       <li>Country:{common}</li>
-      <li>Region:{region}</li>
+      <li>Capital:{capital}</li>
+
+      <li>{continents}</li>
+      <li>{region}</li>
       </ul>
       <button id="visited">Visited!</button>
       <button id="add_to_bucket">Add to Bucket List</button>

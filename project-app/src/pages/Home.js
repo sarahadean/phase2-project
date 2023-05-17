@@ -10,10 +10,8 @@ import Menu from './../components/Menu'
 
 function Home() {
 
-  const [capitals, setCapitals] = useState([])
   const [search, setSearch] = useState('')
   const [countries, setCountries] = useState([])
-
 
 // useEffect(() => {
 //  Promise.all(
@@ -38,20 +36,14 @@ function Home() {
 console.log(countries)
 //FUNCTIONING 
 
-useEffect(() => {getCapitals()},[])
+useEffect(() => {getCountries()},[])
 
-  function getCapitals(){
-    fetch('http://localhost:3330/capitals')
+  function getCountries(){
+    fetch('http://localhost:3330/countries')
     .then(resp => resp.json())
-    .then((capitals) => setCapitals(capitals))
+    .then((countries) => setCountries(countries))
   }
 
-//THIS DID NOT WORK
-  // function getCountries(){
-  //   fetch('http://localhost:3330/countries')
-  //   .then(resp => resp.json())
-  //   .then(countries => setCountries(countries))
-  // }
 
   console.log(countries)
   // console.log(capitals) - GET REQUEST SUCCESSFUL
@@ -61,20 +53,20 @@ useEffect(() => {getCapitals()},[])
     setSearch(newStr)
   }
 
-  const displayedCapitals = capitals.filter((el) => 
+  const filteredCountries = countries.filter((el) => 
   el.name.common.toLowerCase().includes(search.toLowerCase())
   )
 
   //filter functionality
   function filterByRegion(selectedRegion){
-   [...capitals].filter(el =>
+   [...countries].filter(el =>
     el.region === selectedRegion ? true : false)
   }
 
     return (
       <div>
         <Menu filterByRegion={filterByRegion} search={search} handleSearch={handleSearch}/>
-        <CapitalList capitals={displayedCapitals}/>
+        <CapitalList countries={filteredCountries}/>
       </div>
     )
   }

@@ -1,12 +1,12 @@
 import React from 'react'
 import CapitalCard from './CapitalCard.js'
 
-function CapitalList({capitals}) {
+function CapitalList({countries}) {
 
-console.log(capitals)
+// console.log(capitals)
   return (
     <div className='cards'>
-      {capitals.map((el,i) => <CapitalCard key={i} capitalInfo={el}/>)}
+      {countries.map((el,i) => <CapitalCard key={i} country={el}/>)}
     </div>
   )
 }
