@@ -12,6 +12,9 @@ function Home() {
 
   const [search, setSearch] = useState('')
   const [countries, setCountries] = useState([])
+  const [selectedContinent, setContinent] = useState('All')
+  // const [display, setDisplay] = useState([])
+
 
 useEffect(() => {getCountries()},[])
 
@@ -26,8 +29,11 @@ useEffect(() => {getCountries()},[])
     setSearch(newStr)
   }
 
-  const filteredCountries = [...countries].filter((el) => 
-  el.name.common.toLowerCase().includes(search.toLowerCase())
+  const filteredCountries = [...countries].filter(country => 
+  (country.continents[0] === selectedContinent || selectedContinent === "All") 
+  &&
+  (country.name.common.toLowerCase().includes(search.toLowerCase()))
+
   )
 ////sort alphabetically///////
   function sortCountries(){
@@ -76,17 +82,14 @@ useEffect(() => {getCountries()},[])
   //   }
   // }
 
-  function filterByRegion(selection){
-    setCountries([...countries].filter(country =>
-      country.continents[0] === selection ? country : false
-    ))
-  }
-
-  const displayedCountries = () => [...countries].filter(country =>
-    
-    country.continents[0] === selection ? country : false
-  )
-
+  //Want to display countries if continent matches e.target.value selection, show all countries if 'all' selected
+  ///COMMENTED OUT AND ADDED INTO 'filteredCountries' VARIABLE
+// let continentFilter = [...countries].filter(country => country.continents[0] === selectedContinent || selectedContinent === "All")
+  
+  ///filter by continent:
+  function filterByRegion(newSel){
+      setContinent(newSel)
+    } 
 
 
     return (
