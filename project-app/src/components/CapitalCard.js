@@ -39,26 +39,27 @@ import React, { useState } from 'react'
 
 function CapitalCard({country, currency}) {
 
-  const [isVisited, setVisited] = useState(false)
+  const [isToggled, setToggle] = useState(false)
 
   // let currencyName = Object.values(currency)[0].name
 
-  console.log(currency)
+  // console.log(currency)
   const {flags: {png}, flags: {alt}, name: {common}, capital, continents} = country
 
   const {name, symbol} = currency
 
-  function handleClick(){
-    setVisited(prev => !prev)
-  }
 
-const handlePatch = () => {
-  fetch(`http://localhost:3330/countries/${countries.id}`,{
-    method: 'PATCH',
-    body: JSON.stringify({})
+  ///pass down visited state so post request can add country to list
+const handleVisit = () => {
+  setToggle(prev => !prev)
+  fetch(`http://localhost:3330/visited/`,{
+    method: 'POST',
+    body: JSON.stringify({...country}),
+    header: {'content-type':'application/json'}
   })
+  .then(r => r.json())
+  .then(data => setVisited(data))
 }
-
 
   return (
     <div className='card'>
@@ -73,7 +74,7 @@ const handlePatch = () => {
       <li>{continents}</li>
       {/* <li>{region}</li> */}
       </ul>
-      <button id="visited" className='button' onClick={() => handleClick()}> {isVisited ? "Visited" : "Mark as Visited"}</button>
+      <button id="visited" className='button' onClick={() => handleVisit()}> {isToggled? "Visited" : "Mark as Visited"}</button>
       <button id="add_to_bucket" className='button'>Add to Bucket List</button>
 
     </div>
