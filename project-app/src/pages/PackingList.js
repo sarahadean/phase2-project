@@ -1,8 +1,8 @@
 import React from "react"
 
-function About() {
+function PackingList() {
     return (
       <div>About PAGE</div>
     )
   }
-export default About
+export default PackingList

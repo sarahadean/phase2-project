@@ -13,13 +13,13 @@ function NavBar () {
                         <a href="/" onClick={navigate}>HOME</a>
                     </li>
                     <li className="nav">
-                        <a href="/about" onClick={navigate}>ABOUT</a>
+                        <a href="/packing-list" onClick={navigate}>PACKING LIST</a>
                     </li>
                     <li className="nav">
-                        <a href="/favorites" onClick={navigate}>FAVORITES</a>
+                        <a href="/bucket-list" onClick={navigate}>BUCKET LIST</a>
                     </li>
                     <li className="nav">
-                        <a href="/form" onClick={navigate}>ADD</a>
+                        <a href="/visited" onClick={navigate}>VISITED</a>
                     </li>
                 </ul>
             </nav>

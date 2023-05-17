@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Form() {
+function Visited() {
   return (
     <div>Form
       <form>
@@ -21,4 +21,4 @@ function Form() {
   )
 }
 
-export default Form
+export default Visited
