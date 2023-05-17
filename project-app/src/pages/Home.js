@@ -12,29 +12,9 @@ function Home() {
 
   const [search, setSearch] = useState('')
   const [countries, setCountries] = useState([])
+  const [selectedContinent, setContinent] = useState('All')
+  // const [display, setDisplay] = useState([])
 
-// useEffect(() => {
-//  Promise.all(
-//   [
-//   fetch('http://localhost:3330/capitals'), 
-//   fetch('http://localhost:3330/countries')
-// ]).then(links => {
-//   const capitalResp = links[0];
-//   const countriesResp = links[0];
-
-//   setCapitals(capitalResp)
-//   setCountries(countriesResp)
-// })
-// }, [])
-//   constPromise.all([res1.json(), res2.json()]))
-// .then(([capitals, countries]) => {
-// setCapitals(capitals),
-// setCountries(countries)
-// })
-// }, [])
-
-// console.log(countries)
-//FUNCTIONING 
 
 useEffect(() => {getCountries()},[])
 
@@ -44,16 +24,16 @@ useEffect(() => {getCountries()},[])
     .then((countries) => setCountries(countries))
   }
 
-
-  // console.log(capitals) - GET REQUEST SUCCESSFUL
-
 ///search functionality
   const handleSearch = (newStr) => {
     setSearch(newStr)
   }
 
-  const filteredCountries = [...countries].filter((el) => 
-  el.name.common.toLowerCase().includes(search.toLowerCase())
+  const filteredCountries = [...countries].filter(country => 
+  (country.continents[0] === selectedContinent || selectedContinent === "All") 
+  &&
+  (country.name.common.toLowerCase().includes(search.toLowerCase()))
+
   )
 ////sort alphabetically///////
   function sortCountries(){
@@ -84,11 +64,33 @@ useEffect(() => {getCountries()},[])
   // }
 
 
-  /////filter functionality////////
-  function filterByRegion(selectedRegion){
-   [...countries].filter(el =>
-    el.region === selectedRegion ? true : false)
-  }
+
+
+  // filter functionality
+  // function filterByRegion(selectedRegion){
+  //  [...countries].filter(el =>
+  //   el.region === selectedRegion ? true : false)
+  // }
+
+  // const filterByRegion = (e) => {
+  //   setContinents(e.target.value);
+  //   if(e.target.value === '') {
+  //     setCountries(countries)
+  //   } else {
+  //     setCountries(countries.filter(country =>
+  //       country.continents === e.target.value))
+  //   }
+  // }
+
+  //Want to display countries if continent matches e.target.value selection, show all countries if 'all' selected
+  ///COMMENTED OUT AND ADDED INTO 'filteredCountries' VARIABLE
+// let continentFilter = [...countries].filter(country => country.continents[0] === selectedContinent || selectedContinent === "All")
+  
+  ///filter by continent:
+  function filterByRegion(newSel){
+      setContinent(newSel)
+    } 
+
 
     return (
       <div>

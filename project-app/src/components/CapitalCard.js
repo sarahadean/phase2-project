@@ -50,6 +50,7 @@ function CapitalCard({country}) {
       <span className='flag'>
         <img className='flag' src={png} alt={alt}/>
       </span>
+      <h3>{common}</h3>
       <ul className='country-info'>
       <li>{common}</li>
       <li>Capital:{capital}</li>
