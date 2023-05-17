@@ -18,6 +18,7 @@ function Menu({search, handleSearch, filterByRegion}) {
           <option value='Oceania'>Oceania</option>
           <option value='Antarctic'>Antarctic</option>
         </select>
+        <button>Show Passport Stamps</button>
 
     </div>
   )

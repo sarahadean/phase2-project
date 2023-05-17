@@ -40,7 +40,8 @@ function CapitalCard({capitalInfo}) {
       <li>Country:{common}</li>
       <li>Region:{region}</li>
       </ul>
-      <button>Favorite</button>
+      <button id="visited">Visited!</button>
+      <button id="add_to_bucket">Add to Bucket List</button>
     </div>
   )
 }
