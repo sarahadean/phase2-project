@@ -34,15 +34,31 @@ import React, { useState } from 'react'
 //   ]
 // },
 
-function CapitalCard({country}) {
+// ********TASK: SHOW CURRENCIES FOR EACH COUNTRY
+
+
+function CapitalCard({country, currency}) {
 
   const [isVisited, setVisited] = useState(false)
 
-  const {flags: {png}, flags: {alt}, name: {common}, capital, region, continents} = country
+  // let currencyName = Object.values(currency)[0].name
+
+  console.log(currency)
+  const {flags: {png}, flags: {alt}, name: {common}, capital, continents} = country
+
+  const {name, symbol} = currency
 
   function handleClick(){
     setVisited(prev => !prev)
   }
+
+const handlePatch = () => {
+  fetch(`http://localhost:3330/countries/${countries.id}`,{
+    method: 'PATCH',
+    body: JSON.stringify({})
+  })
+}
+
 
   return (
     <div className='card'>
@@ -52,10 +68,10 @@ function CapitalCard({country}) {
       </span>
       <h3>{common}</h3>
       <ul className='country-info'>
-      <li>{common}</li>
       <li>Capital:{capital}</li>
+      <li>Currencies:{symbol}</li>
       <li>{continents}</li>
-      <li>{region}</li>
+      {/* <li>{region}</li> */}
       </ul>
       <button id="visited" className='button' onClick={() => handleClick()}> {isVisited ? "Visited" : "Mark as Visited"}</button>
       <button id="add_to_bucket" className='button'>Add to Bucket List</button>
