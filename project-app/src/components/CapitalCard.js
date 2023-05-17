@@ -40,6 +40,7 @@ function CapitalCard({country}) {
 
   return (
     <div className='card'>
+
       <span className='flag'>
         <img src={png} alt={alt}/>
       </span>
@@ -51,6 +52,7 @@ function CapitalCard({country}) {
       </ul>
       <button id="visited" className='button'>Visited!</button>
       <button id="add_to_bucket" className='button'>Add to Bucket List</button>
+
     </div>
   )
 }

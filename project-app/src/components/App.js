@@ -5,10 +5,10 @@ import {
 } from 'react-router-dom'
 
 import Home from '../pages/Home'
-import About from '../pages/About'
-import Favorites from '../pages/Favorites'
+import PackingList from '../pages/PackingList'
+import BucketList from '../pages/BucketList'
 import Header from '../components/Header'
-import Form from '../pages/Form'
+import Visited from '../pages/Visited'
 
 function App() {
   return (
@@ -16,9 +16,9 @@ function App() {
       <Header />
       <Routes>
           <Route exact path="/" element={<Home />}>HOME</Route>
-          <Route path="/about" element={<About />}>About</Route>
-          <Route path="/favorites" element={<Favorites />}>Favorites</Route>
-          <Route path="/form" element={<Form />}>Form</Route>
+          <Route path="/bucket-list" element={<BucketList />}>Bucket List</Route>
+          <Route path="/visited" element={<Visited />}>Visited</Route>
+          <Route path="/packing-list" element={<PackingList />}>Packing List</Route>
       </Routes>
     </div>
   );

@@ -1,8 +1,8 @@
 import React from "react"
 
-function Favorites() {
+function BucketList() {
     return (
       <div>Favorites PAGE</div>
     )
   }
-export default Favorites
+export default BucketList

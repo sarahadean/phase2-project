@@ -13,63 +13,120 @@ code {
 }
 
 :root{
-  --green: #00ef7c;
+  --green: #579d42;
+  --light-green: #a6cd57;
+  --orange: #f8971f;
+  --yellow: #ffd600;
+  --blue-green: #00a9b7;
   --white: #f1f1f1; 
   --black: #030416;
-  --blue: #338fff;
-  --blue-dark: #145cb3;
+  --blue: #33a1de;
+  --blue-dark: #0a2540;
+  --purple: #513572;
+  --pink: #ff6e42;
+  --teal: #005249;
+  --slate: #808080;
   --color: var(--white);
   --background: var(--black);
   --primary: var(--blue);
   }
   
-  /*layout */
-  * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
   
-    .App{
-      background-color: var(--white)
-    }
+.App{
+  background-color: var(--white)
+}
+  
+.App-header {
+  background-color: darkolivegreen;
+  height: 50px;
+}
+  
+#nav-list {
+  margin: 0;
+  padding: 0;
+}
+/* Nav items */
+li.nav {
+  display: inline;
+  width: 50px;
+  padding: 2px;
+  margin: 20px;
+  border-right: 1px solid #bbb;
+}
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  /*cards*/
-  .cards {
-      margin: 0 auto;
-      list-style: none;
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
+/* nav bar links (selecting all <a> elements that are direct
+   children of <li> elements) */
+/* li > a {
+  display: inline;
+  padding: 10px;
+} */
+
+#searchBar {
+  background-color: var(--pink);
+}
+
+.cards {
+    margin: 0 auto;
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 8%;
+  }
     
-    }
-  
-    .card {
-      max-width: 400px;
-      min-height: 400px;
-      max-height: 400px;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      border: 2px solid var(--dark-turquoise);
-      background-color: var(--blue);
-    }
+.card {
+  max-width: 400px;
+  min-height: 400px;
+  max-height: 400px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border: 8px solid var(--slate);
+  background-color: var(--blue-dark);
+  padding: 8% 8% 2% 8%;
+  border-radius: 2%;
+  color: var(--white)
+}
 
-    .flag {
-      background-color: var(--green);
-    }
+.flag {
+  background-color: var(--green);
+  text-align: center;
+}
+    
+.button {
+  display: inline-block;
+  padding: 3px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: var(--light-green);
+  border-color: var(--green);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  box-shadow: 0 3px #999;
+  margin: 8px;
+}
 
-    /* Nav List */
-    #nav-list {
-      background-color: darkgreen;
-    }
+.button:hover {background-color: var(--light-green)}
 
-    .App-header {
-      background-color: darkolivegreen;
-    }
-
-    /* Search Bar */
-    #searchBar {
-      background-color: darkcyan;
-    }
+.button:active {
+  background-color: var(--light-green);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
