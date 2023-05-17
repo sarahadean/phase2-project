@@ -43,15 +43,14 @@ function CapitalCard({country}) {
       <span className='flag'>
         <img src={png} alt={alt}/>
       </span>
-      <ul>
+      <ul className='country-info'>
       <li>Country:{common}</li>
       <li>Capital:{capital}</li>
-
       <li>{continents}</li>
       <li>{region}</li>
       </ul>
-      <button id="visited">Visited!</button>
-      <button id="add_to_bucket">Add to Bucket List</button>
+      <button id="visited" className='button'>Visited!</button>
+      <button id="add_to_bucket" className='button'>Add to Bucket List</button>
     </div>
   )
 }
