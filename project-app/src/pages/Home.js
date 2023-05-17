@@ -33,7 +33,7 @@ function Home() {
 // })
 // }, [])
 
-console.log(countries)
+// console.log(countries)
 //FUNCTIONING 
 
 useEffect(() => {getCountries()},[])
@@ -45,7 +45,6 @@ useEffect(() => {getCountries()},[])
   }
 
 
-  console.log(countries)
   // console.log(capitals) - GET REQUEST SUCCESSFUL
 
 ///search functionality
