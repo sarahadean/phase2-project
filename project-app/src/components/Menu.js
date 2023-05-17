@@ -10,7 +10,7 @@ function Menu({search, handleSearch, filterByRegion}) {
       <button>Sort A-Z</button>
       <label>Filter by Continent: </label>
         <select onChange={(e) => filterByRegion(e.target.value)}> 
-          <option value=''> </option>
+          <option value='All'> </option>
           <option value='Asia'>Asia</option>
           <option value='North America'>North America</option>
           <option value='South America'>South America</option>
