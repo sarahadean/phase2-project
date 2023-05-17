@@ -12,8 +12,8 @@ function Menu({search, handleSearch, filterByRegion}) {
         <select onChange={(e) => filterByRegion(e.target.value)}> 
           <option value=''> </option>
           <option value='Asia'>Asia</option>
-          <option value='North America'>Americas</option>
-          <option value='South America'>Americas</option>
+          <option value='North America'>North America</option>
+          <option value='South America'>South America</option>
           <option value='Africa'>Africa</option>
           <option value='Europe'>Europe</option>
           <option value='Oceania'>Oceania</option>
