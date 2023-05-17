@@ -101,8 +101,14 @@ ul {
 }
 
 .flag {
-  background-color: var(--green);
+  /* background-color: var(--green); */
   text-align: center;
+  width: 200px;
+  justify-content: center;
+}
+image.flag {
+  height: 100%;
+  width: auto;
 }
     
 .button {
