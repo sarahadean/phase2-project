@@ -1,7 +1,6 @@
 import {
-  Switch,
   Routes,
-  Route
+  Route,
 } from 'react-router-dom'
 
 import Home from '../pages/Home'
