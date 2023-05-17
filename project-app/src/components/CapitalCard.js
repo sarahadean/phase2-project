@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // {
 //   "flags": {
@@ -36,7 +36,13 @@ import React from 'react'
 
 function CapitalCard({country}) {
 
+  const [isVisited, setVisited] = useState(false)
+
   const {flags: {png}, flags: {alt}, name: {common}, capital, region, continents} = country
+
+  function handleClick(){
+    setVisited(prev => !prev)
+  }
 
   return (
     <div className='card'>
@@ -45,12 +51,12 @@ function CapitalCard({country}) {
         <img src={png} alt={alt}/>
       </span>
       <ul className='country-info'>
-      <li>Country:{common}</li>
+      <li>{common}</li>
       <li>Capital:{capital}</li>
       <li>{continents}</li>
       <li>{region}</li>
       </ul>
-      <button id="visited" className='button'>Visited!</button>
+      <button id="visited" className='button' onClick={() => handleClick()}> {isVisited ? "Visited" : "Mark as Visited"}</button>
       <button id="add_to_bucket" className='button'>Add to Bucket List</button>
 
     </div>

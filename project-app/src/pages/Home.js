@@ -53,7 +53,7 @@ useEffect(() => {getCountries()},[])
     setSearch(newStr)
   }
 
-  const filteredCountries = countries.filter((el) => 
+  const filteredCountries = [...countries].filter((el) => 
   el.name.common.toLowerCase().includes(search.toLowerCase())
   )
 
