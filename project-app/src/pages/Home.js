@@ -13,29 +13,6 @@ function Home() {
   const [search, setSearch] = useState('')
   const [countries, setCountries] = useState([])
 
-// useEffect(() => {
-//  Promise.all(
-//   [
-//   fetch('http://localhost:3330/capitals'), 
-//   fetch('http://localhost:3330/countries')
-// ]).then(links => {
-//   const capitalResp = links[0];
-//   const countriesResp = links[0];
-
-//   setCapitals(capitalResp)
-//   setCountries(countriesResp)
-// })
-// }, [])
-//   constPromise.all([res1.json(), res2.json()]))
-// .then(([capitals, countries]) => {
-// setCapitals(capitals),
-// setCountries(countries)
-// })
-// }, [])
-
-console.log(countries)
-//FUNCTIONING 
-
 useEffect(() => {getCountries()},[])
 
   function getCountries(){
@@ -43,10 +20,6 @@ useEffect(() => {getCountries()},[])
     .then(resp => resp.json())
     .then((countries) => setCountries(countries))
   }
-
-
-  console.log(countries)
-  // console.log(capitals) - GET REQUEST SUCCESSFUL
 
 ///search functionality
   const handleSearch = (newStr) => {
@@ -85,11 +58,36 @@ useEffect(() => {getCountries()},[])
   // }
 
 
-  /////filter functionality////////
-  function filterByRegion(selectedRegion){
-   [...countries].filter(el =>
-    el.region === selectedRegion ? true : false)
+
+
+  // filter functionality
+  // function filterByRegion(selectedRegion){
+  //  [...countries].filter(el =>
+  //   el.region === selectedRegion ? true : false)
+  // }
+
+  // const filterByRegion = (e) => {
+  //   setContinents(e.target.value);
+  //   if(e.target.value === '') {
+  //     setCountries(countries)
+  //   } else {
+  //     setCountries(countries.filter(country =>
+  //       country.continents === e.target.value))
+  //   }
+  // }
+
+  function filterByRegion(selection){
+    setCountries([...countries].filter(country =>
+      country.continents[0] === selection ? country : false
+    ))
   }
+
+  const displayedCountries = () => [...countries].filter(country =>
+    
+    country.continents[0] === selection ? country : false
+  )
+
+
 
     return (
       <div>
