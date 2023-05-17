@@ -56,8 +56,36 @@ useEffect(() => {getCountries()},[])
   const filteredCountries = [...countries].filter((el) => 
   el.name.common.toLowerCase().includes(search.toLowerCase())
   )
+////sort alphabetically///////
+  function sortCountries(){
+    setCountries(countries.toSorted((a,b) => 
+    a.name.common > b.name.common ? 1 : -1))
+  }
 
-  //filter functionality
+  ///sort dropdown///
+  ///if e.target.value = alphabetically, then [...countries].toSorted
+  //if = continent, then a.continent > b.continent ? 1:-1
+  //if = region, then a.region > b.region ? 1: -1
+
+  ///COMMENTED OUT WHILE WORKING ON FILTER BY COUNTRY
+  // function handleSort(selection){
+  //   setCountries([...countries].filter(el => {
+  //     if (selection === 'Alphabetically'){
+  //       countries.toSorted((a,b) => 
+  //       a.name.common > b.name.common ? 1 : -1)
+  //   } else if (selection === 'Continent'){
+  //     countries.toSorted((a,b) => 
+  //   a.continent > b.continent ? 1 : -1)
+  //   } else if (selection === 'Region'){
+  //     countries.toSorted((a,b) => 
+  //   a.region > b.region ? 1 : -1)
+  //   }
+  // }
+  //   ))
+  // }
+
+
+  /////filter functionality////////
   function filterByRegion(selectedRegion){
    [...countries].filter(el =>
     el.region === selectedRegion ? true : false)
@@ -65,7 +93,7 @@ useEffect(() => {getCountries()},[])
 
     return (
       <div>
-        <Menu filterByRegion={filterByRegion} search={search} handleSearch={handleSearch}/>
+        <Menu filterByRegion={filterByRegion} search={search} handleSearch={handleSearch} sortCountries={sortCountries} />
         <CapitalList countries={filteredCountries}/>
       </div>
     )

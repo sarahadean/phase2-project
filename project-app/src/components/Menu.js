@@ -1,19 +1,26 @@
 import React from 'react'
 import SearchBar from './SearchBar'
 
-function Menu({search, handleSearch, filterByRegion}) {
+function Menu({search, handleSearch, filterByRegion, sortCountries, handleSort}) {
 
   
   return (
     <div>
       <SearchBar search={search} handleSearch={handleSearch}/>
-      <button>Sort A-Z</button>
+      <button onClick={() => sortCountries()}>Sort A-Z</button>
+      <label>Sort by:</label>
+      <select onChange={(e) => handleSort(e.target.value)}> 
+          <option value=''> </option>
+          <option value='Alphabetically'>Alphabetically</option>
+          <option value='Continent'>Continent</option>
+          <option value='Region'>Region</option>
+        </select>
       <label>Filter by Continent: </label>
         <select onChange={(e) => filterByRegion(e.target.value)}> 
-          <option value=''> </option>
+          <option value='All'>All</option>
           <option value='Asia'>Asia</option>
-          <option value='North America'>Americas</option>
-          <option value='South America'>Americas</option>
+          <option value='North America'>North America</option>
+          <option value='South America'>South America</option>
           <option value='Africa'>Africa</option>
           <option value='Europe'>Europe</option>
           <option value='Oceania'>Oceania</option>
