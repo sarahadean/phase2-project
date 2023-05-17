@@ -35,12 +35,13 @@ function CapitalCard({capitalInfo}) {
   return (
     <div className='card'>
       <span className='flag'>{flag}</span>
-      <ul>
-      <li>Capital:{capital}</li>
-      <li>Country:{common}</li>
-      <li>Region:{region}</li>
+      <ul className='country-info'>
+        <li>Capital:{capital}</li>
+        <li>Country:{common}</li>
+        <li>Region:{region}</li>
       </ul>
-      <button>Favorite</button>
+      <button id='bucket-list' className="button">Bucket List</button>
+      <button id='visited' className="button">Visited</button>
     </div>
   )
 }
