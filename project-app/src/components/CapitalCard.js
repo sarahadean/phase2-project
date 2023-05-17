@@ -48,7 +48,7 @@ function CapitalCard({country}) {
     <div className='card'>
 
       <span className='flag'>
-        <img src={png} alt={alt}/>
+        <img className='flag' src={png} alt={alt}/>
       </span>
       <ul className='country-info'>
       <li>{common}</li>
