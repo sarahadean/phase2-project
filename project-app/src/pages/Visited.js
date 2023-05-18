@@ -11,6 +11,9 @@ function Visited() {
     memories: ''
   }
   const [form, setForm] = useState(formOutline)
+
+  const baseUrl = "http://localhost:3330"
+  const vistedUrl = baseUrl + "/visited"
   
   function updateForm(e){
     setForm({
@@ -19,9 +22,18 @@ function Visited() {
     })
   }
   
-  function handleSubmit(e){
-    e.preventDefault()
-  }
+  // function handleSubmit(e){
+  //   e.preventDefault();
+  //   fetch (vistedUrl, {
+  //     method: "Post",
+  //     headers: {
+  //       "Contente-Type": "application/json",
+  //     }, body:JSON.stringify({country, flag}),
+    
+  //   })
+  //   .then((response) => response.json())
+  //   .then(({countries, }) )
+  // }
 
 
 
