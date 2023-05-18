@@ -1,4 +1,7 @@
 
+function BucketListForm () {
+    
+}
 export default function BucketListCard ({info}) {
     const {country, flag, continent} = info
 

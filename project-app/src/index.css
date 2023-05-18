@@ -22,6 +22,11 @@ code {
   --teal: #005249;
   --slate: #808080;
   --dark-green: #194206;
+  --palette-a: #020301;
+  --palette-b: #ffdb15;
+  --palette-c: #f3f5f9;
+  --palette-d: #666769;
+  --palette-e: #8e99a2;
   --color: var(--white);
   --background: var(--black);
   --primary: var(--blue);
@@ -59,6 +64,19 @@ code {
 height: 50px;
 background-color: var(--white);
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.nav-link {
+  height: auto;
+  line-height: 50px;
+  padding: 10px 15px;
+  border-color: var(--palette-e);
+  border-style: solid;
+  border-width: 4px 2px;
+}
+
+#nav-bar .active {
+  background-color: var(--palette-b);
 }
 
 li.nav {
@@ -83,7 +101,7 @@ ul {
 } */
 
 #searchBar {
-  background-color: var(--pink);
+  background-color: var(--palette-b);
 }
 
 .cards {
@@ -103,10 +121,14 @@ ul {
   display: grid;
   grid-template-rows: auto 1fr auto;
   border: 8px solid var();
-  background-color: var(--dark-green);
+  background-color: var(--palette-c);
+  border-color: var(--palette-d);
+  border-width: 3px;
+  border-style: solid;
   padding: 8% 8% 2% 8%;
   border-radius: 2%;
-  color: var(--white);
+  color: var(--palette-a);
+  /* box-shadow: -3px -2px 4px 6px var(--palette-d); */
 }
 
 .flag {
@@ -160,5 +182,19 @@ image.flag {
 }
 
 .fav-card {
-  
+  /* max-width: 410px;
+  max-height: 400px; */
+  min-height: 400px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border: 8px solid var();
+  background-color: var(--palette-c);
+  border-color: var(--palette-d);
+  border-width: 3px;
+  border-style: solid;
+  padding: 1% 1% 1% 1%;
+  border-radius: 2%;
+  color: var(--palette-a);
+  margin: 4%;
+  /* box-shadow: -3px -2px 4px 6px var(--palette-d); */
 }
