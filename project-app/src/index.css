@@ -106,7 +106,12 @@ ul {
 } */
 
 #searchBar {
-  background-color: var(--palette-b);
+  background-color: var(--palette-e);
+  border-color: var(--palette-c);
+  border-style: solid;
+  border-width: 2px 5px 2px 5px;
+  font-size: large;
+  color: var(--palette-b);
 }
 
 .cards {
@@ -218,3 +223,13 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+/* .col.main{
+  min-width: 180px;
+} */
