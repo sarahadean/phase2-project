@@ -63,6 +63,7 @@ function VisitedCard({visitEntry, updatePassport}) {
             <button>Edit</button>
             <button>Delete</button>
         </form>
+
     </div>
   )
 }
