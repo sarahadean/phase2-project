@@ -9121,10 +9121,91 @@
   ],
   "visited": [
     {
+<<<<<<<<< Temporary merge branch 1
       "country": "Kuwait",
       "flag": "https://flagcdn.com/w320/kw.png",
       "id": 1
     },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 2
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 3
+    },
+    {
+      "country": "Austria",
+      "flag": "https://flagcdn.com/w320/at.png",
+      "id": 4
+    },
+    {
+      "country": "Austria",
+      "flag": "https://flagcdn.com/w320/at.png",
+      "id": 5
+=========
+      "country": "Venezuela",
+      "flag": "https://flagcdn.com/w320/ve.png",
+      "id": 1
+    },
+    {
+      "country": "Cape Verde",
+      "flag": "https://flagcdn.com/w320/cv.png",
+      "id": 2
+    },
+    {
+      "country": "Martinique",
+      "flag": "https://flagcdn.com/w320/mq.png",
+      "id": 3
+    },
+    {
+      "country": "Åland Islands",
+      "flag": "https://flagcdn.com/w320/ax.png",
+      "id": 4
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 5
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 6
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 7
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 8
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 9
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 10
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 11
+    },
+    {
+      "country": "Mayotte",
+      "flag": "https://flagcdn.com/w320/yt.png",
+      "id": 12
+>>>>>>>>> Temporary merge branch 2
+    }
   ],
   "favorites": [
     {

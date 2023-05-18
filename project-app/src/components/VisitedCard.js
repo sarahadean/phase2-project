@@ -28,7 +28,23 @@ function VisitedCard({visitEntry, updatePassport}) {
 
    function handleSubmit(e){
     e.preventDefault()
-    updatePassport()
+    fetch('http://localhost:3330/visited',{
+        method: 'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify({
+            image: form.image,
+            cities: form.cities,
+            date: form.date,
+            memories: form.memories
+        })
+    })
+    .then(r => r.json())
+    .then(data => {
+        updatePassport(data)
+        setForm(formOutline)
+    })
   }
     
   return (
@@ -37,33 +53,31 @@ function VisitedCard({visitEntry, updatePassport}) {
         <img src={flag} alt={country}/>
         <h3>{country}</h3>
         </span>
-        <form className='visited-form'>
+        <form className='visited-form' onSubmit={e => handleSubmit(e)}>
             <label>Date of Trip:</label>
-            <input
-            type="text" 
+            <input 
+            name="date"
             value={form.date}
             onChange={(e) => updateForm(e)}></input>
 
             <label>Cities and Sites Visited:</label>
             <input 
-            type="text"
             name="cities"
             onChange={(e) => updateForm(e)}></input>
 
             <label>Write more about your trip:</label>
             <input
             value={form.memories}
-            name="memories" ></input>
+            name="memories" 
+            onChange={(e) => updateForm(e)}></input>
 
             <label>Add a picture:</label>
             <input
             value={form.image}
             name="image"
             onChange={(e) => updateForm(e)}></input>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button type="submit">Save</button>
         </form>
-
     </div>
   )
 }
