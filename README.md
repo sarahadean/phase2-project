@@ -1,11 +1,11 @@
-# Passport Gals ft. Josh
+# PassportPal
 
 ### Description: Learn about different capital cities from around the world
 
 ### User Stories:
 - Click on cards to mark as 'favorite' and create a travel Bucket List with own notes. 
 - Add travel destinations to main list
-- Sort desinations alphabetically
+- Sort destinations alphabetically
 - Filter by region
 - Search for specific city
 
