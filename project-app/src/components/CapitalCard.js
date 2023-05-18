@@ -42,7 +42,6 @@ function CapitalCard({country, updateVisited, updateFavs}) {
   const [isToggled, setToggle] = useState(false)
 
   // let currencyName = Object.values(currency)[0].name
-
   // console.log(currency)
   const {flags: {png}, flags: {alt}, name: {common}, capital, continents} = country
 
@@ -62,12 +61,13 @@ function handleVisit(){
     headers: {'content-type':'application/json'}
   })
   .then(r => r.json())
-  .then(data => console.log(data))
+  .then(data => updateVisited(data))
 }
 
-////POST REQUEST TO ADD TO BUCKETLIST
+
+////POST REQUEST TO ADD TO BUCKETLIST/////
+
 function handleFavs(){
-  // setToggle(prev => !prev)
   let data = {
     flag: png,
     country: common,

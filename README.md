@@ -1,4 +1,4 @@
-# Passport Gals ft. Josh
+# PassportPal
 
 ### Description: Learn about different capital cities from around the world
 

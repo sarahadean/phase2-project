@@ -9119,7 +9119,28 @@
       ]
     }
   ],
-  "visited": [],
+  "visited": [
+    {
+      "country": "Venezuela",
+      "flag": "https://flagcdn.com/w320/ve.png",
+      "id": 1
+    },
+    {
+      "country": "Cape Verde",
+      "flag": "https://flagcdn.com/w320/cv.png",
+      "id": 2
+    },
+    {
+      "country": "Martinique",
+      "flag": "https://flagcdn.com/w320/mq.png",
+      "id": 3
+    },
+    {
+      "country": "Åland Islands",
+      "flag": "https://flagcdn.com/w320/ax.png",
+      "id": 4
+    }
+  ],
   "favorites": [
     {
       "flag": "https://flagcdn.com/w320/gt.png",

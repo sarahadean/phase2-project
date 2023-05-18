@@ -3,12 +3,11 @@ import CapitalList from './../components/CapitalList'
 import Menu from './../components/Menu'
 
 
-function Home() {
+function Home({updateVisited}) {
 
   const [search, setSearch] = useState('')
   const [countries, setCountries] = useState([])
   const [selectedContinent, setContinent] = useState('All')
-  const [visited, setVisited] = useState([])
   // const [display, setDisplay] = useState([])
 
 
@@ -42,12 +41,6 @@ useEffect(() => {getCountries()},[])
   function filterByRegion(newSel){
       setContinent(newSel)
     } 
-
-  //update Visited state function
-  function updateVisited(){
-    setVisited(visited)
-  }
-
 
     return (
       <div>
