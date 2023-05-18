@@ -8,11 +8,13 @@ import PackingList from '../pages/PackingList'
 import BucketList from '../pages/BucketList'
 import Header from '../components/Header'
 import Visited from '../pages/Visited'
+import NavBar from './NavBar'
 
 function App() {
   return (
-    <div className="App">
+    <div id="App">
       <Header />
+      <NavBar />
       <Routes>
           <Route exact path="/" element={<Home />}>HOME</Route>
           <Route path="/bucket-list" element={<BucketList />}>Bucket List</Route>

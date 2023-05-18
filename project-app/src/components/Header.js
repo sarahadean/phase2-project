@@ -1,8 +1,10 @@
-import NavBar from './NavBar'
+import React from "react";
 
 function Header () {
     return (
         <header className="App-header">
+          <h1>PassportPal</h1>
+         
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -15,7 +17,6 @@ function Header () {
         >
           Learn React
         </a> */}
-        <NavBar />
       </header>
     )
 }

@@ -37,7 +37,7 @@ import React, { useState } from 'react'
 // ********TASK: SHOW CURRENCIES FOR EACH COUNTRY
 
 
-function CapitalCard({country, currency, updateVisited}) {
+function CapitalCard({country, updateVisited, updateFavs}) {
 
   const [isToggled, setToggle] = useState(false)
 
@@ -48,23 +48,43 @@ function CapitalCard({country, currency, updateVisited}) {
 
   // const {name, symbol} = currency
 
-  ///POST REQUEST SUCCESSFUL
+  ///POST REQUEST TO ADD COUNTRY AND FLAG TO 'VISITED' SUCCESSFUL BUT ONLY SHOWING ID IN DB.JSON
 function handleVisit(){
-  let data ={
+  let data = {
     country: common,
     flag: png
   }
-console.log(data)
 
   setToggle(prev => !prev)
-  fetch(`http://localhost:3330/visited`,{
+  fetch(`http://localhost:3330/visited`, {
     method: 'POST',
     body: JSON.stringify(data),
-    header: {'content-type':'application/json'}
+    headers: {'content-type':'application/json'}
   })
   .then(r => r.json())
-  .then(data => updateVisited(data))
+  .then(data => console.log(data))
 }
+
+////POST REQUEST TO ADD TO BUCKETLIST
+function handleFavs(){
+  // setToggle(prev => !prev)
+  let data = {
+    flag: png,
+    country: common,
+    continent: continents
+  }
+  fetch('http://localhost:3330/favorites', {
+    method: 'POST',
+    headers:{
+      'content-type':'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(r => r.json())
+  .then(data => updateFavs(data))
+}
+
+
 
   return (
     <div className='card'>
@@ -78,8 +98,8 @@ console.log(data)
       <li>{continents}</li>
       {/* <li>{region}</li> */}
       </ul>
-      <button id="visited" className='button' onClick={() => handleVisit()}> {isToggled? "Visited" : "Mark as Visited"}</button>
-      <button id="add_to_bucket" className='button'>Add to Bucket List</button>
+      <button id="visited" className='button' onClick={() => handleVisit()}> {isToggled? "Visited!" : "Mark as Visited"}</button>
+      <button id="add_to_bucket" className='button'onClick={() => handleFavs()}>Add to Bucket</button>
 
     </div>
   )

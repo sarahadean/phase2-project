@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-
-
-
+import VisitedCard from '../components/VisitedCard'
 
 function Visited() {
 
@@ -27,19 +25,10 @@ function Visited() {
 
 
 
-
-
   return (
     <div>
       <h2>Add your trip</h2>
-      <form onSubmit={() => handleSubmit()}>
-        <input type="text" value={form.image} onChange={(e) => updateForm(e)}> Image </input>
-        <input type="text" value={form.city_name}> City name </input>
-        <input type="text" value={form.country}> Country name </input>
-        <input type="text" value={form.date}> Date Visited </input>
-        <input type="text"value={form.memories}> Memories from your trip </input>
-        <button type="submit">Add</button>
-      </form>
+      
     </div>
   )
 }
