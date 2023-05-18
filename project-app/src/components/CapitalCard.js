@@ -40,6 +40,7 @@ import React, { useState } from 'react'
 function CapitalCard({country, updateVisited, updateFavs}) {
 
   const [isToggled, setToggle] = useState(false)
+  const [isBucket, setBucket] = useState(false)
 
   // let currencyName = Object.values(currency)[0].name
   // console.log(currency)
@@ -47,13 +48,16 @@ function CapitalCard({country, updateVisited, updateFavs}) {
 
   // const {name, symbol} = currency
 
+  function updateButton(){
+
+  }
+
   ///POST REQUEST TO ADD COUNTRY AND FLAG TO 'VISITED' SUCCESSFUL BUT ONLY SHOWING ID IN DB.JSON
 function handleVisit(){
   let data = {
     country: common,
     flag: png
   }
-
   setToggle(prev => !prev)
   fetch(`http://localhost:3330/visited`, {
     method: 'POST',
@@ -73,6 +77,7 @@ function handleFavs(){
     country: common,
     continent: continents
   }
+  setBucket(prev => !prev)
   fetch('http://localhost:3330/favorites', {
     method: 'POST',
     headers:{
@@ -98,8 +103,17 @@ function handleFavs(){
       <li>{continents}</li>
       {/* <li>{region}</li> */}
       </ul>
-      <button id="visited" className='button' onClick={() => handleVisit()}> {isToggled? "Visited!" : "Mark as Visited"}</button>
-      <button id="add_to_bucket" className='button'onClick={() => handleFavs()}>Add to Bucket</button>
+      {isToggled ? 
+      <p> Added to your passport!</p> 
+      : 
+      <button id="visited" className='button' onClick={() => handleVisit()}>Add to Passport</button>}
+
+      {isBucket ?  "Added to your Bucketlist!" :
+      <button id="add_to_bucket" className='button'onClick={() => handleFavs()}>Add to Bucketlist</button>}
+      
+
+  
+      
 
     </div>
   )
