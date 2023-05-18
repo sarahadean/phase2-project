@@ -37,7 +37,7 @@ import React, { useState } from 'react'
 // ********TASK: SHOW CURRENCIES FOR EACH COUNTRY
 
 
-function CapitalCard({country, currency}) {
+function CapitalCard({country, currency, updateVisited}) {
 
   const [isToggled, setToggle] = useState(false)
 
@@ -46,19 +46,24 @@ function CapitalCard({country, currency}) {
   // console.log(currency)
   const {flags: {png}, flags: {alt}, name: {common}, capital, continents} = country
 
-  const {name, symbol} = currency
+  // const {name, symbol} = currency
 
+  ///POST REQUEST SUCCESSFUL
+function handleVisit(){
+  let data ={
+    country: common,
+    flag: png
+  }
+console.log(data)
 
-  ///pass down visited state so post request can add country to list
-const handleVisit = () => {
   setToggle(prev => !prev)
-  fetch(`http://localhost:3330/visited/`,{
+  fetch(`http://localhost:3330/visited`,{
     method: 'POST',
-    body: JSON.stringify({...country}),
+    body: JSON.stringify(data),
     header: {'content-type':'application/json'}
   })
   .then(r => r.json())
-  .then(data => setVisited(data))
+  .then(data => updateVisited(data))
 }
 
   return (
@@ -70,7 +75,6 @@ const handleVisit = () => {
       <h3>{common}</h3>
       <ul className='country-info'>
       <li>Capital:{capital}</li>
-      <li>Currencies:{symbol}</li>
       <li>{continents}</li>
       {/* <li>{region}</li> */}
       </ul>

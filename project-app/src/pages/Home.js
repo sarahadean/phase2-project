@@ -43,11 +43,16 @@ useEffect(() => {getCountries()},[])
       setContinent(newSel)
     } 
 
+  //update Visited state function
+  function updateVisited(){
+    setVisited(visited)
+  }
+
 
     return (
       <div>
         <Menu filterByRegion={filterByRegion} search={search} handleSearch={handleSearch} sortCountries={sortCountries} />
-        <CapitalList countries={filteredCountries}/>
+        <CapitalList countries={filteredCountries} updateVisited={updateVisited}/>
       </div>
     )
   }
