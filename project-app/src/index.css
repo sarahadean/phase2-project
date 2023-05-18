@@ -9,25 +9,16 @@ code {
 }
 /* ~~~~~~~~~~~~stylesheet~~~~~~~~~~~~~ */
 :root{
-  --green: #579d42;
-  --light-green: #a6cd57;
-  --orange: #f8971f;
-  --yellow: #ffd600;
-  --blue-green: #00a9b7;
-  --white: #f1f1f1; 
-  --black: #030416;
+  --blue-green: #02b2c2;
   --blue: #33a1de;
   --blue-dark: #0a2540;
-  --purple: #513572;
-  --pink: #ff6e42;
-  --teal: #005249;
   --slate: #808080;
-  --dark-green: #194206;
   --palette-a: #020301;
-  --palette-b: #ffdb15;
+  --palette-b: #0a2540;
   --palette-c: #f3f5f9;
   --palette-d: #666769;
   --palette-e: #8e99a2;
+  --palette-f: #02b2c2;
   --color: var(--white);
   --background: var(--black);
   --primary: var(--blue);
@@ -43,7 +34,7 @@ code {
 /* ~~~~~~~~~~~App Styling~~~~~~~~~~~~~ */
 #App{
   background-image: linear-gradient(#02b2c2, #1f3a5d);
-  background-color: var(--blue-green)
+  background-color: var(--palette-f)
 }
   
 .App-header {
@@ -53,7 +44,7 @@ code {
   background-position: center center;
   text-align: center;
   font-size: larger;
-  color: var(--white);
+  color: var(--palette-c);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-decoration: wavy;
 }
@@ -65,7 +56,7 @@ code {
 /* Nav items */
 #nav-bar {
 height: 50px;
-background-color: var(--white);
+background-color: var(--palette-b);
 font-family: 'Karla', sans-serif;
 font-weight: 600;
 padding: 0px 5px;
@@ -152,8 +143,8 @@ image.flag {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: var(--light-green);
-  border-color: var(--green);
+  background-color: var(--palette-d);
+  border-color: var(--palette-e);
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
@@ -161,10 +152,10 @@ image.flag {
   margin: 8px;
 }
 
-.button:hover {background-color: var(--light-green)}
+.button:hover {background-color: var(--palette-f)}
 
 .button:active {
-  background-color: var(--light-green);
+  background-color: var(--palette-f);
   box-shadow: 0 2px #666;
   transform: translateY(2px);
 }
@@ -188,8 +179,8 @@ image.flag {
   height: auto;
   padding:1%;
   display: grid;
-  border: 1px solid var(--slate);
-  background-color: var(--white);
+  border: 1px solid var(--palette-d);
+  background-color: var(--palette-c);
   margin: 15px;
  
 }

@@ -53,7 +53,8 @@ function VisitedCard({visitEntry, updatePassport}) {
             <label>Write more about your trip:</label>
             <input
             value={form.memories}
-            name="memories" ></input>
+            name="memories" 
+            onChange={(e) => updateForm(e)}></input>
 
             <label>Add a picture:</label>
             <input
