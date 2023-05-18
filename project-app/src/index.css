@@ -1,5 +1,6 @@
 body {
   position: relative;
+  font-family: 'Karla', sans-serif;
 }
 
 code {
@@ -46,8 +47,9 @@ code {
   
 .App-header {
   background-color: darkolivegreen;
-  height: 200px;
-  background-image: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.ytravelblog.com%2Fwp-content%2Fuploads%2F2018%2F11%2Fplanning-a-trip-tips-and-challenges-2.jpg&tbnid=-SaI87UQUQeUwM&vet=12ahUKEwito-OE7f3-AhUzLN4AHd1UDb0QMygAegUIARDkAQ..i&imgrefurl=https%3A%2F%2Fwww.ytravelblog.com%2Ftravel-planning-challenges%2F&docid=sNrmY7ABrLZLDM&w=800&h=533&q=travel%20planning&ved=2ahUKEwito-OE7f3-AhUzLN4AHd1UDb0QMygAegUIARDkAQ';
+  height: 300px;
+  background-image: url('./../public/world-header.png');
+  background-position: center center;
   text-align: center;
   font-size: larger;
   color: var(--white);
@@ -63,20 +65,23 @@ code {
 #nav-bar {
 height: 50px;
 background-color: var(--white);
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+font-family: 'Karla', sans-serif;
+font-weight: 600;
+padding: 0px 5px;
 }
 .nav-link {
   height: auto;
   line-height: 50px;
   padding: 10px 15px;
-  border-color: var(--palette-e);
+  color: var(--palette-d);
+  /* border-color: var(--palette-e);
   border-style: solid;
-  border-width: 4px 2px;
+  border-width: 4px 2px; */
 }
 
 #nav-bar .active {
-  background-color: var(--palette-b);
+  background-color: var(--palette-e);
+  color: var(--palette-c);
 }
 
 li.nav {
@@ -197,4 +202,19 @@ image.flag {
   color: var(--palette-a);
   margin: 4%;
   /* box-shadow: -3px -2px 4px 6px var(--palette-d); */
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
