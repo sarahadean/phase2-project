@@ -9,9 +9,6 @@ code {
 }
 /* ~~~~~~~~~~~~stylesheet~~~~~~~~~~~~~ */
 :root{
-  --blue-green: #02b2c2;
-  --blue: #33a1de;
-  --blue-dark: #0a2540;
   --slate: #808080;
   --palette-a: #020301;
   --palette-b: #0a2540;
@@ -38,7 +35,7 @@ code {
 }
   
 .App-header {
-  background-color: darkolivegreen;
+  background-color: var(--palette-b);
   height: 300px;
   background-image: url('./../public/world-header.png');
   background-position: center center;

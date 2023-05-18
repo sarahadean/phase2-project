@@ -5,6 +5,8 @@ function Visited() {
   
   const [visitList, setVisitList] = useState([])
 
+  console.log(visitList)
+  
 function updatePassport(newEntry){
   setVisitList({
     ...visitList,
