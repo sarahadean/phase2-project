@@ -34,15 +34,37 @@ import React, { useState } from 'react'
 //   ]
 // },
 
-function CapitalCard({country}) {
+// ********TASK: SHOW CURRENCIES FOR EACH COUNTRY
 
-  const [isVisited, setVisited] = useState(false)
 
-  const {flags: {png}, flags: {alt}, name: {common}, capital, region, continents} = country
+function CapitalCard({country, currency, updateVisited}) {
 
-  function handleClick(){
-    setVisited(prev => !prev)
+  const [isToggled, setToggle] = useState(false)
+
+  // let currencyName = Object.values(currency)[0].name
+
+  // console.log(currency)
+  const {flags: {png}, flags: {alt}, name: {common}, capital, continents} = country
+
+  // const {name, symbol} = currency
+
+  ///POST REQUEST SUCCESSFUL
+function handleVisit(){
+  let data ={
+    country: common,
+    flag: png
   }
+console.log(data)
+
+  setToggle(prev => !prev)
+  fetch(`http://localhost:3330/visited`,{
+    method: 'POST',
+    body: JSON.stringify(data),
+    header: {'content-type':'application/json'}
+  })
+  .then(r => r.json())
+  .then(data => updateVisited(data))
+}
 
   return (
     <div className='card'>
@@ -52,12 +74,11 @@ function CapitalCard({country}) {
       </span>
       <h3>{common}</h3>
       <ul className='country-info'>
-      <li>{common}</li>
       <li>Capital:{capital}</li>
       <li>{continents}</li>
-      <li>{region}</li>
+      {/* <li>{region}</li> */}
       </ul>
-      <button id="visited" className='button' onClick={() => handleClick()}> {isVisited ? "Visited" : "Mark as Visited"}</button>
+      <button id="visited" className='button' onClick={() => handleVisit()}> {isToggled? "Visited" : "Mark as Visited"}</button>
       <button id="add_to_bucket" className='button'>Add to Bucket List</button>
 
     </div>
