@@ -1,6 +1,6 @@
 # PassportPal
 
-### Description: Learn about different capital cities from around the world
+### Description: Your virtual passport. Add countries to your Bucketlist and plan your trip. Add countries you've vistied to a virtual passport and add your own content. 
 
 ### User Stories:
 - Click on cards to mark as 'favorite' and create a travel Bucket List with own notes. 
