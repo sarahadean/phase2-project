@@ -9181,6 +9181,33 @@
       "id": 12
     }
   ],
+  "packing-items": [
+    {
+      "id": 1,
+      "text": "Sandals",
+      "checked": false
+    },
+    {
+      "id": 2,
+      "text": "PassPort",
+      "checked": true
+    },
+    {
+      "id": 3,
+      "text": "Swim suit",
+      "checked": false
+    },
+    {
+      "text": "swim",
+      "checked": false,
+      "id": 4
+    },
+    {
+      "text": "swim",
+      "checked": false,
+      "id": 5
+    }
+  ],
   "favorites": [
     {
       "flag": "https://flagcdn.com/w320/gt.png",

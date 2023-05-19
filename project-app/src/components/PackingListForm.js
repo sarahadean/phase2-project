@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 
+
 function PackingListForm() {
   const [item, setItem] = useState('');
   const [packingList, setPackingList] = useState([
@@ -16,13 +17,27 @@ function PackingListForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (item.trim() !== '') {
-      const newItem = {
-        id: Date.now(),
-        text: item.trim(),
-        checked: false
-      };
-      setPackingList([...packingList, newItem]);
-      setItem('');
+      fetch( 'http://localhost:3330/packing-items', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: item.trim(), checked: false }),
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error('Failed to add packing item');
+          }
+        })
+        .then((newItem) => {
+          setPackingList([...packingList, newItem]);
+          setItem('');
+        })
+        .catch((error) => {
+          console.error('Failed to add packing item:', error);
+        });
     }
   };
 
@@ -34,11 +49,34 @@ function PackingListForm() {
       return item;
     });
     setPackingList(updatedList);
+
+    fetch('http://localhost:3330/packing-items/${itemId}', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ checked: !updatedList.find((item) => item.id === itemId).checked }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to toggle packing item');
+        }
+      })
+      .catch((error) => {
+        console.error('Failed to toggle packing item:', error);
+      });
   };
 
+
   const handleDelete = (itemId) => {
-    const updatedList = packingList.filter((item) => item.id !== itemId);
-    setPackingList(updatedList);
+    fetch(`/api/packing-items/${itemId}`, {
+      method: 'DELETE'
+    })
+      .then(() => {
+        const updatedList = packingList.filter((item) => item.id !== itemId);
+        setPackingList(updatedList);
+      })
+      .catch(error => console.error('Failed to delete packing item:', error));
   };
 
   return (
@@ -63,6 +101,7 @@ function PackingListForm() {
           </li>
         ))}
       </ul>
+      
     </div>
   );
 }
