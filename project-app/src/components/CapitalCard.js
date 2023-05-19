@@ -48,10 +48,7 @@ function CapitalCard({country, updateVisited, updateFavs}) {
 
   // const {name, symbol} = currency
 
-  function updateButton(){
-
-  }
-
+  
   ///POST REQUEST TO ADD COUNTRY AND FLAG TO 'VISITED' SUCCESSFUL BUT ONLY SHOWING ID IN DB.JSON
 function handleVisit(){
   let data = {
@@ -92,6 +89,16 @@ function handleFavs(){
 
 
   return (
+    // <Card style={{width: '18rem'}}>
+    //   <Card.Img variant="top" src={png} />
+    //   <Card.Body>
+    //     <Card.Title>{common}</Card.Title>
+    //     <Card.Text>
+    //       Capital: {capital}
+    //       {continents}
+    //     </Card.Text>
+    //     <Button variant="primary" onClick={() => handleVisit()}>Add to Passport</Button>
+    //     <Button variant="secondary" onClick={() => handleVisit()}>Add to Bucket List</Button>
     <div className='card'>
 
       <span className='flag'>
@@ -100,8 +107,7 @@ function handleFavs(){
       <h3>{common}</h3>
       <ul className='country-info'>
       <li>Capital:{capital}</li>
-      <li>{continents}</li>
-      {/* <li>{region}</li> */}
+      <li>{continents}</li> 
       </ul>
       {isToggled ? 
       <p> Added to your passport!</p> 
@@ -110,12 +116,9 @@ function handleFavs(){
 
       {isBucket ?  "Added to your Bucketlist!" :
       <button id="add_to_bucket" className='button'onClick={() => handleFavs()}>Add to Bucketlist</button>}
-      
-
-  
-      
-
     </div>
+    // </Card.Body>
+    // </Card>
   )
 }
 
