@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Stack from 'react-bootstrap/Stack'
 
 /* 
 separate component for form
@@ -17,7 +18,7 @@ const formOutline ={
   }
 const [form, setForm] = useState(formOutline)
 
-    const {country, flag } = visitEntry
+    const {country, flag, memories, cities, image, date} = visitEntry
 
     function handleSubmit(e){
         e.preventDefault()
@@ -47,13 +48,23 @@ const [form, setForm] = useState(formOutline)
         })
       }
 
+
+      ///toggle between flag and image
   return (
-    <div className='visited-card'>
-        <span>
-        <img src={flag} alt={country}/>
+    <Stack direction="horizontal" gap={3} id='visited-card'>
+    <div>
+        <img src={flag}  alt={country}/>
         <h3>{country}</h3>
-        </span>
-        <form className='visited-form' onSubmit={e => handleSubmit(e)}>
+    </div>
+    <div>
+        <ul>
+            <li>{date}</li>
+            <li>{cities}</li>
+            <li>{memories}</li>
+            <img src={image} alt="user added from trip"/>
+        </ul>
+    </div>
+    <form className='visited-form' onSubmit={e => handleSubmit(e)}>
             <label>Date of Trip:</label>
             <input 
             name="date"
@@ -77,8 +88,8 @@ const [form, setForm] = useState(formOutline)
             name="image"
             onChange={(e) => updateForm(e)}></input>
             <button type="submit">Save</button>
-        </form>
-    </div>
+    </form>
+    </Stack>
   )
 }
 
