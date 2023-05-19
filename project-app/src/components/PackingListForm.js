@@ -69,8 +69,8 @@ function PackingListForm() {
 
 
   const handleDelete = (itemId) => {
-    fetch(`/api/packing-items/${itemId}`, {
-      method: 'DELETE'
+    fetch('http://localhost:3330/packing-items/${itemId}', {
+      method: 'DELETE' 
     })
       .then(() => {
         const updatedList = packingList.filter((item) => item.id !== itemId);
