@@ -3,16 +3,21 @@ import VisitedCard from '../components/VisitedCard'
 
 function Visited() {
   
-  const [visitList, setVisitList] = useState([])
+const [visitList, setVisitList] = useState([])
 
-  console.log(visitList)
-  
+
+///Taking info from form and going through visited list to find matching country
 function updatePassport(newEntry){
-  setVisitList({
-    ...visitList,
-    newEntry
-  })
-}
+  setVisitList([...visitList].map(curVisit => {
+    if (curVisit.id === newEntry.id) {
+      return {...curVisit,
+            newEntry} 
+      } else {
+            return curVisit
+          }    
+    }))
+  }
+
   ///GET request for visited countries
 
   useEffect(() => {getVisitedCountries()},[])
@@ -27,7 +32,11 @@ function updatePassport(newEntry){
   return (
     <div>
       <h1>Your Virtual Passport</h1>
-      {visitList.map(el => <VisitedCard visitEntry={el} key={el.id} updatePassport={updatePassport}/>)}
+      {visitList.map(el => <VisitedCard 
+      visitEntry={el} 
+      key={el.id} 
+      updatePassport={updatePassport} 
+      />)}
     </div>
   )
 }

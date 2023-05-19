@@ -8,45 +8,45 @@ setting edit state will include a post request
 
 
 function VisitedCard({visitEntry, updatePassport}) {
+
+const formOutline ={
+    image: '',
+    cities:'',
+    date: '',
+    memories: ''
+  }
+const [form, setForm] = useState(formOutline)
+
     const {country, flag } = visitEntry
 
-    const formOutline ={
-        image: '',
-        cities:'',
-        date: '',
-        memories: ''
+    function handleSubmit(e){
+        e.preventDefault()
+        fetch(`http://localhost:3330/visited/${visitEntry.id}`,{
+            method: 'PATCH',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify({
+                "image": form.image,
+                "cities": form.cities,
+                "date": form.date,
+                "memories": form.memories
+            })
+        })
+        .then(r => r.json())
+        .then(data => {
+            updatePassport(data)
+            console.log(data)
+        })
       }
 
-    const [form, setForm] = useState(formOutline)
-
-    function updateForm(e){
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    })
-  }
-
-   function handleSubmit(e){
-    e.preventDefault()
-    fetch('http://localhost:3330/visited',{
-        method: 'POST',
-        headers:{
-            'content-type':'application/json'
-        },
-        body:JSON.stringify({
-            image: form.image,
-            cities: form.cities,
-            date: form.date,
-            memories: form.memories
+      function updateForm(e){
+        setForm({
+          ...form,
+          [e.target.name]: e.target.value
         })
-    })
-    .then(r => r.json())
-    .then(data => {
-        updatePassport(data)
-        setForm(formOutline)
-    })
-  }
-    
+      }
+
   return (
     <div className='visited-card'>
         <span>
