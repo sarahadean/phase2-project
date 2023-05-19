@@ -18,9 +18,16 @@ function updatePassport(newEntry){
     }))
   }
 
+  const [form, setForm] = useState(formOutline)
+
+  const baseUrl = "http://localhost:3330"
+  const vistedUrl = baseUrl + "/visited"
+
+
   ///GET request for visited countries
 
   useEffect(() => {getVisitedCountries()},[])
+
   
   function getVisitedCountries(){
     fetch('http://localhost:3330/visited')
@@ -28,7 +35,7 @@ function updatePassport(newEntry){
     .then(visitList => setVisitList(visitList))
   }
   
-  
+
   return (
     <div>
       <h1>Your Virtual Passport</h1>
