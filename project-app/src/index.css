@@ -7,6 +7,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h3 {
+  color: var(--palette-d);
+}
 /* ~~~~~~~~~~~~stylesheet~~~~~~~~~~~~~ */
 :root{
   --slate: #808080;
@@ -220,7 +224,8 @@ a:active {
   display: flex;
 }
 .col {
-  flex: 1;
+  flex: inline;
+  min-width: 200px;
 }
 /* .col.main{
   min-width: 180px;
