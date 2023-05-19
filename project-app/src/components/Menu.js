@@ -8,13 +8,6 @@ function Menu({search, handleSearch, filterByRegion, sortCountries, handleSort})
     <div>
       <SearchBar search={search} handleSearch={handleSearch}/>
       <button onClick={() => sortCountries()}>Sort A-Z</button>
-      <label>Sort by:</label>
-      <select onChange={(e) => handleSort(e.target.value)}> 
-          <option value=''> </option>
-          <option value='Alphabetically'>Alphabetically</option>
-          <option value='Continent'>Continent</option>
-          <option value='Region'>Region</option>
-        </select>
       <label>Filter by Continent: </label>
         <select onChange={(e) => filterByRegion(e.target.value)}> 
           <option value='All'>All</option>
