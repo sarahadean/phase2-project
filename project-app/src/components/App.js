@@ -9,6 +9,8 @@ import BucketList from '../pages/BucketList'
 import Header from '../components/Header'
 import Visited from '../pages/Visited'
 import NavBar from './NavBar'
+import PackingListForm from './PackingListForm'
+
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
           <Route path="/visited" element={<Visited />}>Visited</Route>
           <Route path="/packing-list" element={<PackingList />}>Packing List</Route>
       </Routes>
+      
+      
+    
     </div>
   );
 }

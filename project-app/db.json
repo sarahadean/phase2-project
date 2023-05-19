@@ -9174,6 +9174,11 @@
       "country": "Saint Helena, Ascension and Tristan da Cunha",
       "flag": "https://flagcdn.com/w320/sh.png",
       "id": 11
+    },
+    {
+      "country": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "id": 12
     }
   ],
   "favorites": [
