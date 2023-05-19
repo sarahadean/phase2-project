@@ -1,46 +1,49 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import VisitedCard from '../components/VisitedCard'
 
 function Visited() {
+  
+const [visitList, setVisitList] = useState([])
 
-  const formOutline ={
-    image: '',
-    city_name:'',
-    country: '',
-    date: '',
-    memories: ''
+
+///Taking info from form and going through visited list to find matching country
+function updatePassport(newEntry){
+  setVisitList([...visitList].map(curVisit => {
+    if (curVisit.id === newEntry.id) {
+      return {...curVisit,
+            newEntry} 
+      } else {
+            return curVisit
+          }    
+    }))
   }
+
   const [form, setForm] = useState(formOutline)
 
   const baseUrl = "http://localhost:3330"
   const vistedUrl = baseUrl + "/visited"
+
+
+  ///GET request for visited countries
+
+  useEffect(() => {getVisitedCountries()},[])
+
   
-  function updateForm(e){
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    })
+  function getVisitedCountries(){
+    fetch('http://localhost:3330/visited')
+    .then(r => r.json())
+    .then(visitList => setVisitList(visitList))
   }
   
-  // function handleSubmit(e){
-  //   e.preventDefault();
-  //   fetch (vistedUrl, {
-  //     method: "Post",
-  //     headers: {
-  //       "Contente-Type": "application/json",
-  //     }, body:JSON.stringify({country, flag}),
-    
-  //   })
-  //   .then((response) => response.json())
-  //   .then(({countries, }) )
-  // }
-
-
 
   return (
     <div>
-      <h2>Add your trip</h2>
-      
+      <h1>Your Virtual Passport</h1>
+      {visitList.map(el => <VisitedCard 
+      visitEntry={el} 
+      key={el.id} 
+      updatePassport={updatePassport} 
+      />)}
     </div>
   )
 }
