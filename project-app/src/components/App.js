@@ -14,19 +14,24 @@ import NavBar from './NavBar'
 function App() {
 
   const [visited, setVisited] = useState([])
+  const [favorites, setFavorites] = useState([])
   
   function updateVisited(){
     setVisited()
   }
+  function updateFavorites(){
+    setFavorites()
+  }
 
   console.log(visited)
+  console.log(favorites)
 
   return (
     <div id="App">
       <Header />
       <NavBar />
       <Routes>
-          <Route exact path="/" element={<Home updateVisited={updateVisited}/>}>HOME</Route>
+          <Route exact path="/" element={<Home updateVisited={updateVisited} updateFavs={updateFavorites}/>}>HOME</Route>
           <Route path="/bucket-list" element={<BucketList />}>Bucket List</Route>
           <Route path="/visited" element={<Visited />}>Visited</Route>
           <Route path="/packing-list" element={<PackingList />}>Packing List</Route>

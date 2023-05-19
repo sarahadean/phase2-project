@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
 import CapitalCard from './CapitalCard.js'
 
-function CapitalList({countries, updateVisited}) {
-const [favorites, setFavorites] = useState([])
-
-function updateFavs(){
-  setFavorites(favorites)
-}
+function CapitalList({countries, updateVisited, updateFavs}) {
 
 // console.log(capitals)
   return (
